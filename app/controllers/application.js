@@ -48,11 +48,13 @@ export default Ember.Controller.extend({
                 test: function(func) {
                     let array = [1, 2, 3, 4];
 
-                    func && func(array, 10);
+                    if(func) {
+                        func(array, 10);
+                    }
 
-                    return func && func.length === 2
-                        && array.length === 5
-                        && array[array.length - 1] === 10;
+                    return func && func.length === 2 &&
+                         array.length === 5 &&
+                         array[array.length - 1] === 10;
                 }
             }),
             TestItem.create({
@@ -75,9 +77,9 @@ export default Ember.Controller.extend({
                     let array = [1, 2, 3, 4];
                     let result = func && func(array);
 
-                    return func && func.length === 1
-                        && result.length === 3
-                        && result.join(' ') === '2 3 4';
+                    return func && func.length === 1 &&
+                         result.length === 3 &&
+                         result.join(' ') === '2 3 4';
                 }
             }),
             TestItem.create({
