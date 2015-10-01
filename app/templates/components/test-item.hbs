@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h4>{{test.signature}}</h4>
+        {{ivy-codemirror
+          value=test.func
+          mode="javascript"
+          theme="solarized"
+          lineNumbers=true
+          smartIndent=true}}
+    </div>
+    <div class="col-sm-6">
+        <a  {{action "toggleShowTest"}} class={{test.testClass}}>{{test.testDescription}}</a>
+        {{#if showTest}}
+            <p>{{to-string test.test}}</p>
+        {{/if}}
+    </div>
+</div>

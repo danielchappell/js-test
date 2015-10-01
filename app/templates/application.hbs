@@ -1,18 +1,5 @@
 <h2 id="title">Arrays</h2>
 
 {{#each assessments as |item|}}
-    <div class="row">
-        <div class="col-sm-6">
-            <h4>{{item.signature}}</h4>
-            {{ivy-codemirror
-              value=item.func
-              mode="javascript"
-              theme="solarized"
-              lineNumbers=true
-              smartIndent=true}}
-        </div>
-        <div class="col-sm-6">
-            <p class={{item.testClass}}>{{item.testDescription}}</p>
-        </div>
-    </div>
+    {{test-item test=item}}
 {{/each}}
