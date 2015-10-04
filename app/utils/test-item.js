@@ -8,16 +8,17 @@ export default Ember.Object.extend({
     isTestPassing: Ember.computed('test', 'func', function() {
         let test = this.get('test');
         let func;
+        let result;
+
         try {
             func = eval(`(${this.get('func')})`);
+            result = func && test(func);
         } catch (e) {
             // if (e instanceof SyntaxError) {
             //     alert(e.message);
             // }
         }
-        return func && test(func);
+
+        return result;
     }),
-    testClass: Ember.computed('isTestPassing', function() {
-        return this.get('isTestPassing') ? "passing" : "failing";
-    })
 });
