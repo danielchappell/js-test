@@ -5,6 +5,7 @@ export default Ember.Object.extend({
     func: null,
     testDescription: null,
     test: null,
+    extendedTestItem: null,
     isTestPassing: Ember.computed('test', 'func', function() {
         let test = this.get('test');
         let func;
@@ -20,5 +21,5 @@ export default Ember.Object.extend({
         }
 
         return result;
-    }),
+    })
 });
