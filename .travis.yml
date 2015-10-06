@@ -17,7 +17,7 @@ script:
 - npm test
 deploy:
   provider: heroku
-  buildpack: https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+  buildpack: https://github.com/travis-ci/travis-web-ember-cli-buildpack.git
   api_key:
     secure: IBDra8YmGu/fyCHs8+dzgOI8wwjAK1QLynV8Otg92wRDFiUZylznXZQDcNpiGjZiV+frsN/Men+768/wmPoMXfMo+tVWaX67QPB1iW7WhcWkCH8VXH68D/jYYCM/6KEvoEBL+ZhTCZyTcnb6U7lwSngBtVRA/JbETraXha4dZCzEq2LNEgxLcNF13WWfm2ATahevlnA6Px4MESCcWEgRt4F+fXe05Fawjc/8RqPT8lSpi+fGZ1uI2xscln64pjV5LS5ij4+ACsHL0t4rYnplcVMOlfHZOOtB9EyvQwCNabl9zF9m927SS0JObpc2N4UJtAIehgWhqtGgSvQ8iMa8lLs3R1BQuJjaxP4xWx/5QnDjIH6g43oUr8CYY609virvK5WQGNPZRcnwfPtG8l5iRzBx1k8ueulotm7lwaLJK260r9mnD6JafSkw4xZcsUUOtyz3izsIVGPq9Q3UxDTlDN95veQ012PA0Q7q9MhonV3Iwr0qyOnmgm669Lc68Sdl1SQeeQR7PBQ1Ti1vT0v90EYgG4FAyIcUpdTXGnibOoXEbNh9dIqhfcD8+Chz3w9EVALqWcZX3cfLYL/JZUehiSCgEMls/plZ2E0jMGNndwGNN57skuDwtYsni05FZ+HfSYwMu3DbPMo4wlwdtnHyRUqzaFBSbpnJJFdQpLCYLWw=
   app: jstest
