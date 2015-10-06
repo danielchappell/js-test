@@ -31,15 +31,18 @@ export default Ember.Component.extend({
                  }
             }
 
-            this.set('test.isTestPassing', result);
-
             if (result === true) {
                 this._closeItem();
                 this.setProperties({buttonClass: "btn-primary",
                                     buttonCopy: "Run Code!"});
+
+                this.set('test.isTestPassing', true);
             } else {
                 this.setProperties({buttonClass: "btn-warning",
                                     buttonCopy: "Retry Code?"});
+
+                this.set('test.isTestPassing', false);
+
             }
         }
     }
