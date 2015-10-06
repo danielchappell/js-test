@@ -12,7 +12,9 @@
               smartIndent=true}}
         </div>
         <div class="col-xs-5 col-lg-">
-            <p>{{{test.extendedTestDescription}}}</p>
+            <p class="test-case">{{{test.extendedTestDescription}}}</p>
+            <button {{action "runTest"}} type="button" class="btn {{buttonClass}}">{{buttonCopy}}</button>
+            <p class="error-message sm-padding">{{errorMessage}}</p>
         </div>
     {{/if}}
 </div>

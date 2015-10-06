@@ -5,3 +5,17 @@
 .failing {
   color: red;
 }
+
+.test-case {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.error-message {
+  color: red;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.sm-padding {
+  padding: 2%;
+}
