@@ -15,9 +15,6 @@ install:
 - bower install
 script:
 - npm test
-before_deploy:
-- heroku plugins:install https://github.com/heroku/heroku-repo.git
-- heroku repo:purge_cache -a jstest
 deploy:
   provider: heroku
   buildpack: https://github.com/tonycoco/heroku-buildpack-ember-cli.git
