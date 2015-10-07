@@ -18,7 +18,7 @@ export default Ember.Route.extend({
             TestItem.create({
                 func: "function speak(fn, obj) {\n //your code here \n}",
                 testDescription: "you should be able to change the context in which a function is called.",
-                extendedTestDescription: "<p>Where obj is {greeting: 'Hello', name: 'Rebecca'}<br>Where callSayIt is function() { return sayIt(this.greeting, this.name, '!!!');<br> Expect speak(callsayIt, obj) to be 'Hello, Rebecca!!!'",
+                extendedTestDescription: "<p>Where obj is {greeting: 'Hello', name: 'Rebecca'}<br>Where callSayIt is function() { return sayIt(this.greeting, this.name, '!');<br> Expect speak(callsayIt, obj) to be 'Hello, Rebecca!'",
                 test(func) {
                     let obj = {
                         name: 'Rebecca',
